@@ -8,11 +8,11 @@
             ++inicio;
             do
             {
-                if (inicio % 3 == 0)
+                if (inicio % 3 == 0 && inicio % 5 != 0)
                 {
                     Console.Write("Fizz, ");
                 }
-                else if (inicio % 5 == 0 && inicio != 100)
+                else if (inicio % 5 == 0 && inicio % 3 != 0 && inicio != 100)
                 {
                     Console.Write("Buzz, ");
                 }
