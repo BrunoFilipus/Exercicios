@@ -4,27 +4,17 @@
     {
         static void Main(string[] args)
         {
-            int primeiroValor;
-            int segundoValor;
-            int terceiroValor;
-            int primeiroSegundo;
+            int A, B, C;
 
             Console.Write("Digite o primeiro número: ");
-            primeiroValor = Convert.ToInt16(Console.ReadLine());
+            A = Convert.ToInt16(Console.ReadLine());
             Console.Write("Digite o segundo número: ");
-            segundoValor = Convert.ToInt16(Console.ReadLine());
+            B = Convert.ToInt16(Console.ReadLine());
             Console.Write("Digite o terceiro número: ");
-            terceiroValor = Convert.ToInt16(Console.ReadLine());
-            primeiroSegundo = primeiroValor + segundoValor;
+            C = Convert.ToInt16(Console.ReadLine());
 
-            if (primeiroSegundo < terceiroValor)
-            {
-                Console.WriteLine($"A soma de {primeiroValor} + {segundoValor} não é maior que {terceiroValor}");
-            }
-            else
-            {
-                Console.WriteLine($"A soma de {primeiroValor} + {segundoValor} é maior que {terceiroValor}");
-            }
+            string resultado = A + B > C ? "A + B é maior que C" : "A + B é menor que C";
+            Console.Write(resultado);
         }
     }
 }

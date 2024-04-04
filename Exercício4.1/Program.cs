@@ -4,8 +4,7 @@
     {
         static void Main(string[] args)
         {
-            int salarioBase;
-            int vendas;
+            int salarioBase, vendas;
             double salarioFinal;
 
             Console.Write("Digite o valor do salário base: ");

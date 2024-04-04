@@ -4,28 +4,18 @@
     {
         static void Main(string[] args)
         {
-            int limite;
-            int resultado = 1;
-            int primeiroNumero = 0;
-            int segundoNumero = 1;
+            int primeiro = 0, segundo = 1, troca;
 
-            Console.Write("Digite o limite para a sequência de Fibonacci: ");
-            limite = Convert.ToInt16(Console.ReadLine());
-            Console.Write("0, ");
+            Console.Write("Digite um limite para a sequência: ");
+            int limite = Convert.ToInt16(Console.ReadLine());
 
-            do
+            for (int i = 0; primeiro <= limite; i++)
             {
-                if (resultado == limite)
-                {
-                    Console.WriteLine($"{resultado}.");
-                    break;
-                }
-                Console.Write($"{resultado}, ");
-                resultado = primeiroNumero + segundoNumero;
-                primeiroNumero = segundoNumero;
-                segundoNumero = resultado;
-
-            } while (resultado <= limite);
+                Console.Write($"{primeiro}, ");
+                troca = segundo;
+                segundo += primeiro;
+                primeiro = troca;
+            }
         }
     }
 }

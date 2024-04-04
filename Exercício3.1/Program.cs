@@ -4,17 +4,14 @@
     {
         static void Main(string[] args)
         {
-            double quilometragemInicial;
-            double quilometragemFinal;
-            double consumoCombustivel;
-            double consumoQuilometragem;
-
+            decimal quilometragemInicial, quilometragemFinal, consumoCombustivel, consumoQuilometragem;
+            
             Console.Write("Digite a quilometragem inicial: ");
-            quilometragemInicial = Convert.ToDouble(Console.ReadLine());
+            quilometragemInicial = Convert.ToDecimal(Console.ReadLine());
             Console.Write("Digite a quilometragem final: ");
-            quilometragemFinal = Convert.ToDouble(Console.ReadLine());
+            quilometragemFinal = Convert.ToDecimal(Console.ReadLine());
             Console.Write("Digite o consumo de combustível: ");
-            consumoCombustivel = Convert.ToDouble(Console.ReadLine());
+            consumoCombustivel = Convert.ToDecimal(Console.ReadLine());
 
             consumoQuilometragem = consumoCombustivel / (quilometragemFinal - quilometragemInicial);
             Console.WriteLine($"O consumo de combustível por quilômetro é de {consumoQuilometragem} litros/km.");

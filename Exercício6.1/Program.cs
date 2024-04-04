@@ -4,10 +4,8 @@
     {
         static void Main(string[] args)
         {
-            int comprimentoTerreno;
-            int larguraTerreno;
-            int areaTerreno;
-
+            int comprimentoTerreno, larguraTerreno, areaTerreno;
+            
             Console.WriteLine("Digite o comprimento do terreno (em metros): ");
             comprimentoTerreno = Convert.ToInt16(Console.ReadLine());
             Console.WriteLine("Digite a largura do terreno (em metros): ");

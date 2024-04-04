@@ -4,18 +4,14 @@
     {
         static void Main(string[] args)
         {
-            int numerador = 1;
-            int resultado;
-            do
+            for (int i = 1; i <= 10; i++)
             {
-                for (int i = 1; i <= 10; i++)
+                for (int j = 1; j <= 10; j++)
                 {
-                    resultado = i * numerador;
-                    Console.WriteLine($"{numerador}x{i}={resultado}");
+                    Console.Write($"{i} x {j} = {i * j}\t");
                 }
-                numerador++;
                 Console.WriteLine();
-            } while (numerador <= 10);
+            }
         }
     }
 }

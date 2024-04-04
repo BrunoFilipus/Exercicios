@@ -4,20 +4,17 @@
     {
         static void Main(string[] args)
         {
-            int numero;
-            int resultado = 1;
+            int final = 1;
 
-            Console.Write("Digite o número para calcular seu fatorial: ");
-            numero = Convert.ToInt16(Console.ReadLine());
-            int fatorial = numero;
+            Console.Write("Digite um número para calcular seu fatorial: ");
+            int numero = Convert.ToInt16(Console.ReadLine());
 
-            do
+            for (int i = numero; i > 0; --i)
             {
-                resultado *= numero;
-                numero--;
-            } while (numero >= 2);
+                final *= i;
+            }
 
-            Console.WriteLine($"O resultado de {fatorial}! é = {resultado}.");
+            Console.WriteLine($"{numero}! = {final}");
         }
     }
 }

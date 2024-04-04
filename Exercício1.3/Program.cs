@@ -4,21 +4,15 @@
     {
         static void Main(string[] args)
         {
-            int inicio = 100;
-
-            do
+            for (int i = 100; i < 200; i++)
             {
-                inicio++;
-                Console.Write($"{inicio}, ");
-                inicio++;
-
-                if (inicio == 198)
+                if (i == 198)
                 {
-                    inicio++;
-                    Console.Write($"{inicio}.");
+                    Console.Write($"{++i}.");
                     break;
                 }
-            } while (inicio < 200);
+                Console.Write($"{++i}, ");
+            }
         }
     }
 }

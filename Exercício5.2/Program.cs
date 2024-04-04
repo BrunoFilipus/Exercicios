@@ -4,11 +4,8 @@
     {
         static void Main(string[] args)
         {
-            int primeiroNumero;
-            int segundoNumero;
-            int resultado;
-            int operacao;
-
+            int primeiroNumero, segundoNumero, resultado, operacao;
+            
             Console.Write("Digite o primeiro número: ");
             primeiroNumero = Convert.ToInt16(Console.ReadLine());
             Console.Write("Digite o segundo número: ");

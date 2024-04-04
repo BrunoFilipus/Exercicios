@@ -4,41 +4,34 @@
     {
         static void Main(string[] args)
         {
-            int primeiroValor;
-            int segundoValor;
-            int terceiroValor;
+            int A, B, C, troca;
 
             Console.Write("Digite o primeiro número: ");
-            primeiroValor = Convert.ToInt16(Console.ReadLine());
+            A = Convert.ToInt16(Console.ReadLine());
             Console.Write("Digite o segundo número: ");
-            segundoValor = Convert.ToInt16(Console.ReadLine());
+            B = Convert.ToInt16(Console.ReadLine());
             Console.Write("Digite o terceiro número: ");
-            terceiroValor = Convert.ToInt16(Console.ReadLine());
+            C = Convert.ToInt16(Console.ReadLine());
 
-            if (primeiroValor > segundoValor && primeiroValor > terceiroValor && segundoValor > terceiroValor)
+            if (A < B)
             {
-                Console.WriteLine($"Os números em ordem decrescente são: {primeiroValor}, {segundoValor} e {terceiroValor}");
+                troca = A;
+                A = B;
+                B = troca;
             }
-            else if (primeiroValor > segundoValor && primeiroValor > terceiroValor && segundoValor < terceiroValor)
+            if (A < C)
             {
-                Console.WriteLine($"Os números em ordem decrescente são: {primeiroValor}, {terceiroValor} e {segundoValor}");
+                troca = C;
+                C = A;
+                A = troca;
             }
-            else if (primeiroValor < segundoValor && primeiroValor > terceiroValor)
+            if (B < C)
             {
-                Console.WriteLine($"Os números em ordem decrescente são: {segundoValor}, {primeiroValor} e {terceiroValor}");
+                troca = C;
+                C = B;
+                B = troca;
             }
-            else if (primeiroValor < segundoValor && primeiroValor < terceiroValor && segundoValor > terceiroValor)
-            {
-                Console.WriteLine($"Os números em ordem decrescente são: {segundoValor}, {terceiroValor} e {primeiroValor}");
-            }
-            else if (primeiroValor < segundoValor && primeiroValor < terceiroValor && segundoValor < terceiroValor)
-            {
-                Console.WriteLine($"Os números em ordem decrescente são: {terceiroValor}, {segundoValor} e {primeiroValor}");
-            }
-            else
-            {
-                Console.WriteLine($"Os números em ordem decrescente são: {terceiroValor}, {primeiroValor} e {segundoValor}");
-            }
+            Console.WriteLine($"{A}, {B}, {C}.");
         }
     }
 }

@@ -4,33 +4,15 @@
     {
         static void Main(string[] args)
         {
-            int inicio = 0;
-            ++inicio;
-            do
+            for (int i = 1; i < 100; i++)
             {
-                if (inicio % 3 == 0)
-                {
-                    Console.Write("Fizz, ");
-                }
-                else if (inicio % 5 == 0 && inicio != 100)
-                {
-                    Console.Write("Buzz, ");
-                }
-                else if (inicio % 3 == 0 && inicio % 5 == 0)
-                {
-                    Console.Write("FizzBuzz, ");
-                }
-                else if (inicio == 100 && inicio % 5 == 0)
-                {
-                    Console.Write("Buzz.");
-                    break;
-                }
-                else
-                {
-                    Console.Write($"{inicio}, ");
-                }
-                ++inicio;
-            } while (inicio <= 100);
+                bool fizz = (i % 3 == 0);
+                bool buzz = (i % 5 == 0);
+                bool fizzBuzz = fizz && buzz;
+                string resultado = fizzBuzz ? "FizzBuzz" : fizz ? "Fizz" : buzz ? "Buzz" : i.ToString();
+
+                Console.WriteLine(resultado);
+            }
         }
     }
 }

@@ -4,14 +4,13 @@
     {
         static void Main(string[] args)
         {
-            double farenheitTemp;
-            double celsiusTemp;
-
+            decimal farenheitTemp, celsiusTemp;
+            
             Console.Write("Digite a temperatura em Fahrenheit: ");
-            farenheitTemp = Convert.ToDouble(Console.ReadLine());
+            farenheitTemp = Convert.ToDecimal(Console.ReadLine());
 
             celsiusTemp = (farenheitTemp - 32) * 5 / 9;
-            Console.WriteLine($"A temperatura em Celsius é: {celsiusTemp}");
+            Console.WriteLine($"A temperatura em Celsius é: {celsiusTemp} Cº.");
         }
     }
 }
